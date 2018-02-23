@@ -4,10 +4,15 @@
   <meta charset="UTF-8">
   <title>JS Drum Kit</title>
   <link rel="stylesheet" href="style.css">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 </head>
 <body>
 
-
+  <div class="header">
+    <h1>DRUM</h1>
+  </div>
+    
   <div class="keys">
     <div data-key="65" class="key">
       <kbd>A</kbd>
@@ -56,6 +61,9 @@
   <audio data-key="74" src="sounds/snare.wav"></audio>
   <audio data-key="75" src="sounds/tom.wav"></audio>
   <audio data-key="76" src="sounds/tink.wav"></audio>
+  <footer>
+    Build with all the love in the World
+  </footer>
 
 <script>
 
@@ -65,18 +73,33 @@
   }
 
   function playSound(e) {
-    const audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
-    const key = document.querySelector(`div[data-key="${e.keyCode}"]`)
+
+    let audio = document.querySelector(`audio[data-key="${e.keyCode}"]`)
+    let  key = document.querySelector(`div[data-key="${e.keyCode}"]`)
+
+    if(e.type == 'click') {
+
+      if(e.srcElement.nodeName == "KBD" || e.srcElement.nodeName == "SPAN") {
+            key = e.target.parentNode
+      }
+      else {
+        key = e.target;
+      }
+      audio = document.querySelector(`audio[data-key="${key.getAttribute('data-key')}"]`)
+
+    }
 
     if(! audio) return;
+    key.classList.remove('playing')
     key.classList.add('playing')
     audio.currentTime = 0;
     audio.play();
   }
   const keys = document.querySelectorAll('.key');
-  
+  keys.forEach(key => key.addEventListener('click',playSound));
   keys.forEach(key => key.addEventListener('transitionend', removeTransition))
   window.addEventListener('keydown', playSound)
+  
 </script>
 
 
