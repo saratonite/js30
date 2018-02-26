@@ -1,8 +1,8 @@
 # JS 30
 
 + [x] JavaScript Drum Kit
-+ [ ] CSS + JS clock
-+ [ ] Playing with CSS Variables and JS
++ [x] CSS + JS clock
++ [x] Playing with CSS Variables and JS
 + [ ] Array Cardio Day 1
 + [ ] Flex Panels Image Gallery
 + [ ] Ajax Type Ahead
