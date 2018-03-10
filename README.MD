@@ -5,7 +5,7 @@
 + [x] Playing with CSS Variables and JS
 + [x] Array Cardio Day 1
 + [x] Flex Panels Image Gallery
-+ [ ] Ajax Type Ahead
++ [x] Ajax Type Ahead
 + [ ] Array Cardio Day 2
 + [ ] Fun with HTML5 Canvas
 + [ ] 14 Must Know Dev Tools Tricks
@@ -16,7 +16,7 @@
 + [ ] Object and Arrays - Reference VS Copy
 + [ ] LocalStorage and Event Delegation
 + [ ] CSS Text Shadow Mouse Move Effect
-+ [ ] Sorting Band Names without articles
++ [ ] Sorting Band Names without articles>hacks1
 + [ ] Tally String Times with Reduce
 + [ ] Unreal Webcam Fun
 + [ ] Native Speech Recognition
